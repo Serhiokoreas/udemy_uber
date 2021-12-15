@@ -25,12 +25,10 @@ nav
     padding: 13px 70px
     margin: 0
     list-style-type: none
-
     &_link
         color: #ffffff
         font-size: 12px
         font-weight: 300
-
     &_item
         border-right: 2px dotted black
         padding-right: 28px
@@ -232,6 +230,26 @@ nav
             margin: 0 auto
             border-radius: 100%
             cursor: pointer
+            &:before
+                content: ''
+                display: block
+                height: 2px
+                width: 14px
+                background-color: $main-color
+                transition: 0.3s  all
+            &:after
+                position: absolute
+                content: ''
+                left: 50%
+                transform: translateX(-50%)
+                display: block
+                height: 14px
+                width: 2px
+                background-color: $main-color
+                transition: 0.3s  all
+            &:hover
+                &:before, &:after
+                    background-color: $second-color
 .choise
     height: 499px
     padding-top: 57px
